@@ -25,5 +25,20 @@ All the planning of my project is available in the projects seccion of this repo
 
 ## App Develompment
 
+### Tools
+
+The page was developed with the next tools:
+
+- Vue JS
+- Javascript
+- CSS3
+- HTML5 
+- Materialize
+
+The deployment of the project is made in Firebase Hosting.
+
 ## Final Result
 
+In the next link you can access to the page and see the final result:
+
+[final-result-link](https://fe-intelimetrica.firebaseapp.com/#/)
