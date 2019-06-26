@@ -1,27 +1,29 @@
-# frontend-intelimetrica
+# Melp 
+### Find the best restaurantes in your city
 
-> A Vue.js project
+### Index
 
-## Build Setup
+- [App Flux](#app-flux)
+- [Planning](#planning)
+- [App Development](#app-development)
+- [Final Result](#final-result)
 
-``` bash
-# install dependencies
-npm install
+## App Flux
 
-# serve with hot reload at localhost:8080
-npm run dev
+I realized the flux of what the interface must show, and this is the result:
 
-# build for production with minification
-npm run build
+![flux-app-img](https://github.com/Pau-za/Test-FE-Intelim-trica/blob/master/readme-imgs/mdLinks%20project.png)
 
-# build for production and view the bundle analyzer report
-npm run build --report
 
-# run unit tests
-npm run unit
+## Planning
 
-# run all tests
-npm test
-```
+- I made a kan-ban planning including all the biggest tasks, and thought about the small ones I would have to accomplish to complete the first ones. 
+- I ordered the tasks according to the value each one can give to the user. 
+- I also wrote the definition of done for each task.
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+All the planning of my project is available in the projects seccion of this repository.
+
+## App Develompment
+
+## Final Result
+
