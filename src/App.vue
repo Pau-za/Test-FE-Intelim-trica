@@ -1,22 +1,24 @@
 <template>
   <div id="app">
-    <div>
-      <!-- <img id="bgim" src="./assets/Intelimetrika.jpg"> -->
-    </div>
+    <Navbar/>
     <router-view/>
   </div>
 </template>
 
 <script>
+import Navbar from "@/components/Navbar";
 export default {
-  name: "App"
+  name: "App",
+  components: {
+    Navbar
+  }
 };
 </script>
 
 <style>
 #app {
   background-image: url("./assets/Intelimetrika_1.jpg");
-  background-repeat: no-repeat;
+  background-repeat: round;
   background-attachment: fixed;
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

@@ -1,16 +1,16 @@
 <template>
   <div>
-    <Navbar/>
     <h1 class="color-text">Welcome to MELP</h1>
+    <Restaurants/>
   </div>
 </template>
 
 <script>
-import Navbar from "@/components/Navbar";
+import Restaurants from "@/components/Restaurants";
 export default {
   name: "Main",
   components: {
-    Navbar
+      Restaurants
   }
 };
 </script>
