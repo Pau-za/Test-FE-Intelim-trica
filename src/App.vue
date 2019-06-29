@@ -16,18 +16,32 @@ export default {
 </script>
 
 <style>
+h1,
+h2,
+h3 {
+  font-family: "Homemade Apple", cursive;
+  font-family: "Leckerli One", cursive;
+  font-family: "Merienda One", cursive;
+  font-family: "Pacifico", cursive;
+}
+
+p {
+  font-family: "Quicksand", sans-serif;
+  font-family: "Dosis", sans-serif;
+  font-family: "Josefin Sans", sans-serif;
+  font-family: "Heebo", sans-serif;
+}
+
 #app {
   background-image: url("./assets/Intelimetrika_1.jpg");
   background-repeat: round;
   background-attachment: fixed;
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
   width: -webkit-fill-available;
-  height: -webkit-fill-available;
 }
 
 #bgim {

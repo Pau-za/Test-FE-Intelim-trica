@@ -1,10 +1,11 @@
 <template>
   <div>
     <h3 class="modified">We show you the best restaurants in the City</h3>
-    <div v-for="element of restaurants" :key="element.id">
+    <div v-for="element of restaurants" :key="element.id" class="center-align">
       <div class="row">
-        <div class="col s12 m6">
-          <div class="card">
+        <div class="col m3 l3"></div>
+        <div class="col s12 m6 l6">
+          <div class="card deep-orange lighten-5">
             <div class="card-content">
               <span class="card-title">{{element.name}}</span>
               <h5>Ubication</h5>
@@ -21,12 +22,13 @@
               </p>
               <p>Phone: {{element.contact.phone}}</p>
             </div>
-            <div class="card-action">
+            <div class="card-action deep-orange darken-4">
               <a :href="element.contact.site" target="blank">Visit the Site</a>
               <!-- <a href="#">This is a link</a> -->
             </div>
           </div>
         </div>
+        <div class="col m3 l3"></div>
       </div>
     </div>
   </div>

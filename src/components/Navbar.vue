@@ -1,6 +1,6 @@
 <template>
   <div class="navbar-fixed">
-    <nav class="black">
+    <nav class="deep-orange darken-4">
       <div class="nav-wrapper">
         <a href="#" class="brand-logo right">Logo</a>
         <a href="#" class="sidenav-trigger" data-target="side-menu">
