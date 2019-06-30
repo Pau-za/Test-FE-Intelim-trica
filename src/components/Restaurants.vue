@@ -7,14 +7,17 @@
           <div class="col s3"></div>
           <div class="input-field col s6 modified">
             <i class="material-icons prefix">search</i>
-            <input id="icon_prefix" type="text" class="validate" v-model="search"/>
+            <input id="icon_prefix" type="text" class="validate" v-model="search" />
             <label for="icon_prefix">Search by State</label>
           </div>
           <div class="col s3"></div>
         </div>
       </form>
     </div>
-
+    <div>
+      <h5 class="modified">Order restaurants by name</h5>
+      <a class="waves-effect waves-light btn orange darken-4" @click="orderByNameZtoA()">Z to A</a>
+    </div>
     <div v-for="element of filterByCountry" :key="element.id" class="center-align">
       <div class="row">
         <div class="col m3 l3"></div>
@@ -54,14 +57,14 @@ export default {
   data() {
     return {
       restaurants: [],
-      search: ''
+      search: ""
     };
   },
   computed: {
     filterByCountry() {
-      return this.restaurants.filter((element) => {
-        return element.address.state.toLowerCase().match(this.search)
-      })
+      return this.restaurants.filter(element => {
+        return element.address.state.toLowerCase().match(this.search);
+      });
     }
   },
   created() {
@@ -69,9 +72,18 @@ export default {
       .get("https://s3-us-west-2.amazonaws.com/lgoveabucket/data_melp.json")
       .then(data => {
         //this promise executes when the response of the data is ok
-        console.log(data);
         this.restaurants = data.body;
+        console.log(this.restaurants);
       });
+  },
+  methods: {
+    orderByNameZtoA() {
+      this.restaurants.sort((a, b) => {
+        if (a.name > b.name) {
+          return -1;
+        }
+      });
+    }
   }
 };
 </script>
