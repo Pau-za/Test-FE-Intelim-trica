@@ -52,7 +52,7 @@
             </div>
             <div class="card-action deep-orange darken-4">
               <a :href="element.contact.site" target="blank">Visit the Site</a>
-              <!-- <a href="#">This is a link</a> -->
+              <div class="fb-like" :data-href="element.contact.site" data-width="" data-layout="button" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
             </div>
           </div>
         </div>
