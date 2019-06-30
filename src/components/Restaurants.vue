@@ -1,7 +1,21 @@
 <template>
   <div>
     <h3 class="modified">We show you the best restaurants in the City</h3>
-    <div v-for="element of restaurants" :key="element.id" class="center-align">
+    <div class="row">
+      <form class="col s12">
+        <div class="row">
+          <div class="col s3"></div>
+          <div class="input-field col s6 modified">
+            <i class="material-icons prefix">search</i>
+            <input id="icon_prefix" type="text" class="validate" v-model="search"/>
+            <label for="icon_prefix">Search by State</label>
+          </div>
+          <div class="col s3"></div>
+        </div>
+      </form>
+    </div>
+
+    <div v-for="element of filterByCountry" :key="element.id" class="center-align">
       <div class="row">
         <div class="col m3 l3"></div>
         <div class="col s12 m6 l6">
@@ -11,9 +25,9 @@
               <h5>Ubication</h5>
               <p>
                 St: {{element.address.street}},
-                <br>
+                <br />
                 {{element.address.city}}, {{element.address.state}}
-                <br>
+                <br />
               </p>
               <h5>Contact</h5>
               <p>
@@ -39,16 +53,24 @@ export default {
   name: "Restaurants",
   data() {
     return {
-      restaurants: []
+      restaurants: [],
+      search: ''
     };
   },
-  //   methods: {},
+  computed: {
+    filterByCountry() {
+      return this.restaurants.filter((element) => {
+        return element.address.state.toLowerCase().match(this.search)
+      })
+    }
+  },
   created() {
     this.$http
       .get("https://s3-us-west-2.amazonaws.com/lgoveabucket/data_melp.json")
       .then(data => {
+        //this promise executes when the response of the data is ok
         console.log(data);
-        this.restaurants = data.body.slice(0, 10);
+        this.restaurants = data.body;
       });
   }
 };
