@@ -1,5 +1,5 @@
 <template>
-  <div class="navbar-fixed">
+  <div class="mt">
     <nav class="deep-orange darken-4">
       <div class="nav-wrapper">
         <a href="#" class="brand-logo right">Logo</a>
@@ -27,7 +27,7 @@
 <script>
 export default {
   name: "Navbar",
-   methods: {
+  methods: {
     activate: document.addEventListener("DOMContentLoaded", () => {
       var elems = document.querySelectorAll(".sidenav");
       var instances = M.Sidenav.init(elems);
@@ -37,7 +37,21 @@ export default {
 </script>
 
 <style scoped>
-.navbar-fixed {
-  margin-top: -6%;
+/* @media screen and (min-width: 992px) and (max-width: 1060px)  { */
+  .mt {
+    margin-top: -6%;
+  }
+/* }; */
+
+@media screen and (max-width: 992px) and (min-width: 600px) {
+  .navbar-fixed {
+    margin-top: -10%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .navbar-fixed {
+    margin-top: -15%;
+  }
 }
 </style>

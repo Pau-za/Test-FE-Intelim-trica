@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <h1 class="color-text">Welcome to MELP</h1>
+  <div class="container">
+    <h1 class="deep-orange lighten-5">Welcome to MELP</h1>
     <Restaurants/>
   </div>
 </template>
@@ -17,9 +17,9 @@ export default {
 
 <style>
 .color-text {
-  background-color: #eeeeee;
-  color: #212121;
-  opacity: 0.6;
+  /* background-color: #eeeeee;
+  color: #000000;
+  opacity: 0.6; */
   width: 55%;
 }
 </style>
