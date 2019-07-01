@@ -1,5 +1,6 @@
 <template>
   <div>
+    <button @click="mounted()">Map</button>
     <div class="row">
       <div class="col s1"></div>
       <h3 class="col s10 deep-orange lighten-5">We show you the best restaurants in the City</h3>
@@ -24,8 +25,14 @@
       </div>
       <div class="col s12 m6 l6">
         <h5 class="modified">Order restaurants by rating:</h5>
-        <a class="waves-effect waves-light btn orange darken-4" @click="orderByRatingDesc()">Descendent</a>
-        <a class="waves-effect waves-light btn orange darken-4" @click="orderByRatingAsc()">Ascendent</a>
+        <a
+          class="waves-effect waves-light btn orange darken-4"
+          @click="orderByRatingDesc()"
+        >Descendent</a>
+        <a
+          class="waves-effect waves-light btn orange darken-4"
+          @click="orderByRatingAsc()"
+        >Ascendent</a>
       </div>
     </div>
     <div v-for="element of filterByCountry" :key="element.id" class="center-align">
@@ -43,6 +50,7 @@
                 {{element.address.city}}, {{element.address.state}}
                 <br />
               </p>
+              <!-- <div id="map"></div> -->
               <h5>Contact</h5>
               <p>
                 Email:
@@ -52,7 +60,16 @@
             </div>
             <div class="card-action deep-orange darken-4">
               <a :href="element.contact.site" target="blank">Visit the Site</a>
-              <div class="fb-like" :data-href="element.contact.site" data-width="" data-layout="button" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+              <div
+                class="fb-like"
+                :data-href="element.contact.site"
+                data-width
+                data-layout="button"
+                data-action="like"
+                data-size="small"
+                data-show-faces="true"
+                data-share="true"
+              ></div>
             </div>
           </div>
         </div>
@@ -63,12 +80,14 @@
 </template>
 
 <script>
+
 export default {
   name: "Restaurants",
   data() {
     return {
       restaurants: [],
       search: ""
+      // map: null
     };
   },
   computed: {
@@ -84,6 +103,10 @@ export default {
       .then(data => {
         //this promise executes when the response of the data is ok
         this.restaurants = data.body;
+        const location = this.restaurants.map(index => {
+          return index.address.location;
+        });
+        console.log(location);
         console.log(this.restaurants);
       });
   },
@@ -111,7 +134,18 @@ export default {
       this.restaurants.sort((a, b) => {
         return a.rating - b.rating;
       });
-    }
+    },
+  
+    // initMap() {
+    //   const location = this.restaurants.map(index => {
+    //     return index.address.location;
+    //   });
+    //   console.log(this.location);
+    //   this.map = new google.maps.Map(document.getElementById("map"), {
+    //     center: this.location,
+    //     zoom: 13
+    //   });
+    // }
   }
 };
 </script>

@@ -1,14 +1,34 @@
 <template>
   <div id="app">
-    <Navbar/>
-    <router-view/>
+    <Navbar />
+    <router-view />
   </div>
 </template>
 
 <script>
 import Navbar from "@/components/Navbar";
+import initMap from "./maps";
+
 export default {
   name: "App",
+  // async mounted() {
+  //   try {
+  //     const google = await initMap();
+  //     const geocoder = new google.maps.Geocoder();
+  //     const map = new google.maps.Map(this.$el);
+
+  //     geocoder.geocode({ address: `Austria` }, (results, status) => {
+  //       if (status !== `OK` || !results[0]) {
+  //         throw new Error(status);
+  //       }
+  //       map.setCenter(results[0].geometry.location);
+  //       map.fitBounds(results[0].geometry.viewport);
+  //     });
+
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // },
   components: {
     Navbar
   }
@@ -16,6 +36,12 @@ export default {
 </script>
 
 <style>
+/* html,
+body {
+  margin: 0;
+  padding: 0;
+} */
+
 h1,
 h2,
 h3 {
@@ -42,9 +68,12 @@ p {
   color: #2c3e50;
   margin-top: 60px;
   width: -webkit-fill-available;
+  /* width: 50vw;
+  height: 50vh; */
 }
 
 #bgim {
   width: 100%;
+  
 }
 </style>
