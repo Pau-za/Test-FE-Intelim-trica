@@ -19,7 +19,6 @@ I realized the flux of what the interface must show, and this is the result:
 
 - I made a kan-ban planning including all the biggest tasks, and thought about the small ones I would have to accomplish to complete the first ones. 
 - I ordered the tasks according to the value each one can give to the user. 
-- I also wrote the definition of done for each task.
 
 All the planning of my project is available in the projects seccion of this repository.
 

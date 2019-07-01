@@ -7,10 +7,11 @@
 
 <script>
 import Navbar from "@/components/Navbar";
-import initMap from "./maps";
+// import initMap from "./maps";
 
 export default {
   name: "App",
+  //This is the function that prints the map, but doesn't work, I need to check why
   // async mounted() {
   //   try {
   //     const google = await initMap();

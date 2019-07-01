@@ -2,7 +2,9 @@
   <div class="mt">
     <nav class="deep-orange darken-4">
       <div class="nav-wrapper">
-        <a href="#" class="brand-logo right">Logo</a>
+        <a href="#" class="brand-logo right">
+          <h5>MELP</h5>
+        </a>
         <a href="#" class="sidenav-trigger" data-target="side-menu">
           <i class="material-icons">menu</i>
         </a>
@@ -38,9 +40,15 @@ export default {
 
 <style scoped>
 /* @media screen and (min-width: 992px) and (max-width: 1060px)  { */
-  .mt {
-    margin-top: -6%;
-  }
+.mt {
+  margin-top: -6%;
+}
+h5 {
+  font-family: "Homemade Apple", cursive;
+  font-family: "Leckerli One", cursive;
+  font-family: "Merienda One", cursive;
+  font-family: "Pacifico", cursive;
+}
 /* }; */
 
 @media screen and (max-width: 992px) and (min-width: 600px) {

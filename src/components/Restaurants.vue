@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button @click="mounted()">Map</button>
+    <!-- <button @click="mounted()">Map</button> -->
     <div class="row">
       <div class="col s1"></div>
       <h3 class="col s10 deep-orange lighten-5">We show you the best restaurants in the City</h3>
